@@ -1,29 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<header>
-  <img src="2.png" alt="Profile picture" class="profile-pic">
-  <h1><a href="https://guns.lol/lunezo79" target="_blank">Lunezo79</a></h1>
-  <p>Roblox Studio Developer — Modeler | Builder | UI Designerr</p>
-</header>
+<title>Lunezo79 | Roblox Studio Portfolio</title>
 <style>
-  body {
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-  
-.profile-pic {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
-  margin-bottom: 20px;
-}
-
   * {
     margin: 0;
     padding: 0;
@@ -36,6 +16,20 @@
     color: #111;
     font-family: 'Segoe UI', Arial, sans-serif;
     min-height: 100vh;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
+  .profile-pic {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+    margin-bottom: 20px;
   }
 
   header {
@@ -77,6 +71,12 @@
     margin-bottom: 50px;
   }
 
+  .box-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
   .box {
     background-color: #3b1f52;
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -91,13 +91,6 @@
     transform: translateY(-8px) scale(1.03);
     border-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.35), 0 15px 30px rgba(0,0,0,0.5);
-  }
-
-  .box img {
-    width: 100%;
-    border-radius: 6px;
-    margin-bottom: 15px;
-    display: block;
   }
 
   .box h2 {
@@ -130,31 +123,37 @@
 </head>
 <body>
 
+  <header>
+    <img src="2.png" alt="Profile picture" class="profile-pic">
+    <h1><a href="https://guns.lol/lunezo79" target="_blank">Lunezo79</a></h1>
+    <p>Roblox Studio Developer — Modeler | Builder | UI Designer</p>
+  </header>
+
   <div class="container">
 
     <div class="section-title">Projects</div>
     <div class="grid">
 
       <a href="Test1.html" class="box-link">
-    <div class="box">
-      <h2>Test1</h2>
-      <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
-    </div>
-    </a>
-    
-    <a href="Test2.html" class="box-link">
-    <div class="box">
-      <h2>Test2</h2>
-      <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
-    </div>
-    </a>
-    
-    <a href="Test3.html" class="box-link">
-    <div class="box">
-      <h2>Test3</h2>
-      <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
-    </div>
-    </a>
+        <div class="box">
+          <h2>Test1</h2>
+          <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
+        </div>
+      </a>
+
+      <a href="Test2.html" class="box-link">
+        <div class="box">
+          <h2>Test2</h2>
+          <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
+        </div>
+      </a>
+
+      <a href="Test3.html" class="box-link">
+        <div class="box">
+          <h2>Test3</h2>
+          <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
+        </div>
+      </a>
 
     </div>
 

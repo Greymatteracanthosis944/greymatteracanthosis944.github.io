@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <header>
   <h1><a href="https://guns.lol/lunezo79" target="_blank">Your Name</a></h1>
-  <p>Roblox Studio Developer — Scripter / Builder / UI Designer</p>
+  <p>Roblox Studio Developer — Modeler | Builder | UI Designerr</p>
 </header>
 <style>
   * {
@@ -91,11 +91,6 @@
 </style>
 </head>
 <body>
-
-  <header>
-    <h1>Your Name</h1>
-    <p>Roblox Studio Developer — Modeler | Builder | UI Designer</p>
-  </header>
 
   <div class="container">
 

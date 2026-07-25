@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <header>
-  <img src="profile.jpg" alt="Profile picture" class="profile-pic">
+  <img src="2.png" alt="Profile picture" class="profile-pic">
   <h1><a href="https://guns.lol/lunezo79" target="_blank">Lunezo79</a></h1>
   <p>Roblox Studio Developer — Modeler | Builder | UI Designerr</p>
 </header>

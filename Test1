@@ -48,7 +48,7 @@
 
   <div class="container">
     <a href="index.html" class="back-link">← Back to portfolio</a>
-    <h1>Project Name 1</h1>
+    <h1>Test1</h1>
     <p>Full detailed description of this project goes here. Talk about what it does, what systems you built (scripting, UI, building), what challenges you solved, and any tools/technologies used.</p>
     <p>You can add as many paragraphs as you want, or embed screenshots/videos here too.</p>
   </div>

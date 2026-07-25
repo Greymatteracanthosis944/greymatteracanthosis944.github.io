@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <header>
-  <h1><a href="https://gunz.lol/lunezo79" target="_blank">Your Name</a></h1>
+  <h1><a href="https://guns.lol/lunezo79" target="_blank">Your Name</a></h1>
   <p>Roblox Studio Developer — Scripter / Builder / UI Designer</p>
 </header>
 <style>

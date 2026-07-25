@@ -14,9 +14,11 @@
   }
 
   body {
-    background-color: #FFFFFF;
+    background: radial-gradient(circle at center, #2a1a3d 0%, #150d1f 35%, #0a0508 70%, #000000 100%);
+    background-attachment: fixed;
     color: #111;
     font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
   }
 
   header {
@@ -28,6 +30,15 @@
   header h1 {
     font-size: 2.5rem;
     letter-spacing: 1px;
+  }
+
+  header h1 a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  header h1 a:hover {
+    text-decoration: underline;
   }
 
   header p {
@@ -50,10 +61,19 @@
   }
 
   .box {
-    background-color: #ffffff;
+    background-color: #3b1f52;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    color: #ffffff;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  }
+
+  .box:hover {
+    transform: translateY(-8px) scale(1.03);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.35), 0 15px 30px rgba(0,0,0,0.5);
   }
 
   .box img {
@@ -66,11 +86,12 @@
   .box h2 {
     font-size: 1.3rem;
     margin-bottom: 8px;
+    color: #ffffff;
   }
 
   .box p {
     font-size: 0.95rem;
-    color: #333333;
+    color: #d9d3e0;
     line-height: 1.4;
   }
 

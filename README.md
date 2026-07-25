@@ -7,6 +7,13 @@
   <p>Roblox Studio Developer — Modeler | Builder | UI Designerr</p>
 </header>
 <style>
+  body {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+  
 .profile-pic {
   width: 130px;
   height: 130px;

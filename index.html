@@ -83,4 +83,180 @@
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-    color:
+    color: #ffffff;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  }
+
+  .box:hover {
+    transform: translateY(-8px) scale(1.03);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.35), 0 15px 30px rgba(0,0,0,0.5);
+  }
+
+  .box h2 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #ffffff;
+  }
+
+  .box p {
+    font-size: 0.95rem;
+    color: #d9d3e0;
+    line-height: 1.4;
+  }
+
+  .section-title {
+    color: #ffffff;
+    font-size: 1.6rem;
+    margin: 40px 0 20px;
+    border-left: 4px solid #ffffff;
+    padding-left: 12px;
+  }
+
+  footer {
+    text-align: center;
+    color: #666666;
+    padding: 30px;
+    font-size: 0.9rem;
+  }
+
+  #status-card {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    max-width: 220px;
+    padding: 12px 16px;
+  }
+
+  #status-card h2 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+
+  #status-card p {
+    font-size: 0.8rem;
+  }
+
+  #status-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+  .dot-online { background-color: #23a55a; box-shadow: 0 0 8px #23a55a; }
+  .dot-idle { background-color: #f0b232; box-shadow: 0 0 8px #f0b232; }
+  .dot-dnd { background-color: #f23f43; box-shadow: 0 0 8px #f23f43; }
+  .dot-offline { background-color: #80848e; box-shadow: 0 0 8px #80848e; }
+</style>
+</head>
+<body>
+
+  <div class="box" id="status-card">
+    <h2><span id="status-dot"></span> <span id="status-text">Loading...</span></h2>
+    <p id="status-activity">Checking Discord presence...</p>
+  </div>
+
+  <header>
+    <img src="2.png" alt="Profile picture" class="profile-pic">
+    <h1><a href="https://guns.lol/lunezo79" target="_blank">Lunezo79</a></h1>
+    <p>Roblox Studio Developer — Modeler | Builder | UI Designer</p>
+  </header>
+
+  <div class="container">
+
+    <div class="section-title">Projects</div>
+    <div class="grid">
+
+      <a href="Test1.html" class="box-link">
+        <div class="box">
+          <h2>Test1</h2>
+          <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
+        </div>
+      </a>
+
+      <a href="Test2.html" class="box-link">
+        <div class="box">
+          <h2>Test2</h2>
+          <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
+        </div>
+      </a>
+
+      <a href="Test3.html" class="box-link">
+        <div class="box">
+          <h2>Test3</h2>
+          <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="section-title">Skills</div>
+    <div class="grid">
+
+      <div class="box">
+        <h2>Modeling</h2>
+        <p>High blender knowladge, prop design, low-poly detailed assets.</p>
+      </div>
+
+      <div class="box">
+        <h2>Building</h2>
+        <p>Terrain, environment design, lighting, optimization.</p>
+      </div>
+
+      <div class="box">
+        <h2>UI</h2>
+        <p>Custom GUI design, menus, HUDs.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    const DISCORD_ID = "YOUR_USER_ID_HERE";
+
+    async function updateStatus() {
+      try {
+        const res = await fetch(`https://api.lanyard.rest/v1/users/${DISCORD_ID}`);
+        const data = await res.json();
+        const status = data.data.discord_status;
+
+        const dot = document.getElementById("status-dot");
+        const text = document.getElementById("status-text");
+        const activity = document.getElementById("status-activity");
+
+        dot.className = "";
+        if (status === "online") {
+          dot.classList.add("dot-online");
+          text.textContent = "Online";
+        } else if (status === "idle") {
+          dot.classList.add("dot-idle");
+          text.textContent = "Idle";
+        } else if (status === "dnd") {
+          dot.classList.add("dot-dnd");
+          text.textContent = "Do Not Disturb";
+        } else {
+          dot.classList.add("dot-offline");
+          text.textContent = "Offline";
+        }
+
+        if (data.data.activities && data.data.activities.length > 0) {
+          activity.textContent = data.data.activities[0].name;
+        } else {
+          activity.textContent = "Not doing anything right now.";
+        }
+      } catch (err) {
+        document.getElementById("status-text").textContent = "Unavailable";
+      }
+    }
+
+    updateStatus();
+    setInterval(updateStatus, 30000);
+  </script>
+
+</body>
+</html>

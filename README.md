@@ -128,26 +128,28 @@
     <div class="section-title">Projects</div>
     <div class="grid">
 
+      <div class="box">
+        <img src="https://via.placeholder.com/400x220" alt="Project screenshot">
+        <h2>Project Name 1</h2>
+        <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
+      </div>
+
+      <div class="box">
+        <img src="https://via.placeholder.com/400x220" alt="Project screenshot">
+        <h2>Project Name 2</h2>
+        <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
+      </div>
+
+      <div class="box">
+        <img src="https://via.placeholder.com/400x220" alt="Project screenshot">
+        <h2>Project Name 3</h2>
+        <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
+      </div>
+
     </div>
-<div class="box">
-  <img src="https://via.placeholder.com/400x220" alt="Project screenshot">
-  <h2>Project Name 1</h2>
-  <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
-</div>
+
     <div class="section-title">Skills</div>
     <div class="grid">
-
-    <div class="box">
-  <img src="https://via.placeholder.com/400x220" alt="Project screenshot">
-  <h2>Project Name 1</h2>
-  <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
-</div>
-
-<div class="box">
-  <img src="https://via.placeholder.com/400x220" alt="Project screenshot">
-  <h2>Project Name 1</h2>
-  <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
-</div>
 
       <div class="box">
         <h2>Scripting</h2>

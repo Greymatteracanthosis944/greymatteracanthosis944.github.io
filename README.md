@@ -139,9 +139,5 @@
 
   </div>
 
-  <footer>
-    <p>All Socails: @lunezo79</p>
-  </footer>
-
 </body>
 </html>

@@ -3,10 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <header>
+  <img src="profile.jpg" alt="Profile picture" class="profile-pic">
   <h1><a href="https://guns.lol/lunezo79" target="_blank">Lunezo79</a></h1>
   <p>Roblox Studio Developer — Modeler | Builder | UI Designerr</p>
 </header>
 <style>
+  .profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+  margin-bottom: 20px;
+}
   * {
     margin: 0;
     padding: 0;

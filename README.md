@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Lunezo79 | Roblox Studio Portfolio</title>
+<header>
+  <h1><a href="https://gunz.lol/lunezo79" target="_blank">Your Name</a></h1>
+  <p>Roblox Studio Developer — Scripter / Builder / UI Designer</p>
+</header>
 <style>
   * {
     margin: 0;
@@ -91,7 +94,7 @@
 
   <header>
     <h1>Your Name</h1>
-    <p>Roblox Studio Developer — Scripter / Builder / UI Designer</p>
+    <p>Roblox Studio Developer — Modeler | Builder | UI Designer</p>
   </header>
 
   <div class="container">

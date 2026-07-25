@@ -142,7 +142,7 @@
   </div>
 
   <footer>
-    <p>Contact: your.email@example.com | DevForum: yourusername</p>
+    <p>All Socails: @lunezo79</p>
   </footer>
 
 </body>

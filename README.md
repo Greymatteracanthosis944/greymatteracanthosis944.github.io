@@ -128,21 +128,21 @@
     <div class="section-title">Projects</div>
     <div class="grid">
 
-      <a href="Test 1.html" class="box-link">
+      <a href="Test1.html" class="box-link">
     <div class="box">
       <h2>Test 1</h2>
       <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
     </div>
     </a>
     
-    <a href="Test 2.html" class="box-link">
+    <a href="Test2.html" class="box-link">
     <div class="box">
       <h2>Test 2</h2>
       <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
     </div>
     </a>
     
-    <a href="Test 3.html" class="box-link">
+    <a href="Test3.html" class="box-link">
     <div class="box">
       <h2>Test 3</h2>
       <p>Short description of what this project is, what you built, and what tools/systems you used.</p>
